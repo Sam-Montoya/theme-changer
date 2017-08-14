@@ -9,7 +9,7 @@ import TextContainer from './components/TextContainer';
 
 class App extends Component {
   // constructor
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
@@ -26,19 +26,19 @@ class App extends Component {
   }
 
   // updateColor
-  updateColor(val){
+  updateColor(val) {
     this.setState({ fontColor: val })
   }
   // updateSize
-  updateSize(val){
+  updateSize(val) {
     this.setState({ fontSize: val })
   }
   // updateFamily
-  updateFamily(val){
+  updateFamily(val) {
     this.setState({ fontFamily: val })
   }
   // updateEditStatus
-  updateEditStatus(val){
+  updateEditStatus(val) {
     this.setState({ allowEdit: val })
   }
 
@@ -46,14 +46,14 @@ class App extends Component {
     return (
       <div>
         <div className="headerBar">
-          <EditToggle update={this.updateEditStatus}/>
-          <ColorChanger update={this.updateColor} allowEdit={this.state.allowEdit}/>
-          <SizeChanger update={this.updateSize} allowEdit={this.state.allowEdit}/>
-          <FamilyChanger update={this.updateFamily} allowEdit={this.state.allowEdit}/>
+          <EditToggle update={this.updateEditStatus} />
+          <ColorChanger update={this.updateColor} allowEdit={this.state.allowEdit} />
+          <SizeChanger update={this.updateSize} allowEdit={this.state.allowEdit} />
+          <FamilyChanger update={this.updateFamily} allowEdit={this.state.allowEdit} />
         </div>
         <div className="textArea">
           <TextContainer fontColor={this.state.fontColor} fontSize={this.state.fontSize}
-          fontFamily={this.state.fontFamily}/>
+            fontFamily={this.state.fontFamily} />
         </div>
       </div>
     )
